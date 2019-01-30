@@ -66,7 +66,7 @@ ad_open_dev(const char *dev, int32 samples_per_sec)
 
     ss.format = PA_SAMPLE_S16LE;
     ss.channels = 1;
-    ss.rate = samples_per_sec;
+    ss.rate = 16000;
     
     pa = pa_simple_new(NULL, "ASR", PA_STREAM_RECORD, dev, "Speech", &ss, NULL, NULL, &error);
     if (pa == NULL) {
